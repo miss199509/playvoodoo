@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/signIn/signIn",
+    "pages/miDoctors/miDoctors",
+    "pages/index/index",
+    "pages/doctorsList/doctorsList",
+    "pages/agreement/agreement",
+    "pages/mine/mine",
+    "pages/toast/toastTest",
+    "pages/searchDoctors/searchDoctors",
+    "pages/details/details",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您的位置信息"
+    }
+  }
+}

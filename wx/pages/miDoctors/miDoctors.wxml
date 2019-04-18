@@ -1,0 +1,22 @@
+<view>
+
+  <view class="doctorsBox">
+    <view wx:if="{{boll}}">
+      <view class="doctorsList" wx:for="{{attrList}}" wx:key="attrList" bindtap="miDoctEve" data-index="{{index}}">
+        <view class="portrait"><image src="{{item.portrait}}"></image></view>
+        <view>
+          <view class="name"><text>{{item.realname}}</text>{{item.doctorType}} {{item.title}}</view>
+          <view class="title">{{item.hospital}}<text>{{item.hospitalLevel}}</text></view>
+          <view class="specialty">擅长：{{item.specialty}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="miPage">
+      <image mode="widthFix" src="https://img.thedoc.cn/wx/Page1@3x.png"></image>
+      <text>暂无医生</text>
+    </view>
+  </view>
+
+  
+  
+</view>

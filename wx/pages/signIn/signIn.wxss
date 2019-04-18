@@ -1,0 +1,87 @@
+/**singIn.wxss**/
+ page {
+  background-color: #F4F4F4;
+} 
+
+.signInput{
+  background-color: #fff;
+}
+
+.iamge{
+  padding: 80rpx 0rpx;
+}
+.iamge image{
+  width:155rpx;
+  display:block;
+  margin:auto;
+  height:225rpx;
+}
+
+.signInput .phone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rpx 40rpx;
+  border-bottom: 0.5rpx solid #D1D1D1;
+}
+.phone input{
+  width: 100%;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 32rpx;
+}
+.phone .place-holder{
+  color: #9B9B9B;
+  font-size: 32rpx;
+}
+.phone button{
+  width: 230rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #BE3468;
+  color: #BE3468;
+  padding: 0rpx;
+  background-color: #fff;
+}
+/*添加发送验证码状态*/
+.phone .operating{
+  color: #9B9B9B;
+  border: 1rpx solid #D1D1D1;
+}
+.password{
+  padding-top: 23rpx;
+  /* margin-top: 23rpx; */
+}
+.password text{
+  width: 220rpx;
+}
+
+
+/*登录提示*/
+.signTips{
+  padding: 0rpx 60rpx;
+  font-size: 24rpx;
+  color: #9B9B9B;
+}
+.signTips text{
+  font-size: 24rpx;
+  color: #0088AD;
+}
+
+/*登录按钮*/
+.signButton{
+  padding: 40rpx;
+}
+.signButton button{
+  background-color: #D1D1D1;
+  font-size: 36rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+  border: none;
+}
+.signButton .operating{
+  background-color: #BE3468;
+}
+button::after{ border: none; }

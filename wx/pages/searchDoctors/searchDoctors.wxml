@@ -1,0 +1,43 @@
+<view>
+
+  <view class="search">
+    <view>
+      <icon type="search" size="15" />
+      <input focus="true" bindinput="realnameEve" placeholder-class="place-holder" type="text" placeholder="搜索医生姓名" value='{{inputValue}}' />
+      <image bindtap="removeEve" class="reSearch" mode="widthFix" src="https://img.thedoc.cn/wx/removeSearch@3x.png"></image>
+    </view>
+  </view>
+
+  <view class="tips" wx:if="{{!doctorsData.length}}">
+    <!-- 搜索无结果 -->
+  </view>
+  
+  <!-- 页面整体高度减去底部导航栏的高度 -->
+  <scroll-view scroll-y style="height:{{doctorsHei}}px" bindscrolltolower="lower" wx:else>
+    <view class="doctorsBox">
+      <view wx:for="{{doctorsData}}" wx:key="doctorsData" class="doctors" bindtap="detailsEve" data-index="{{index}}">
+
+        <view class="startBox">
+          <image src="{{item.portrait}}"></image>
+          <image wx:if="{{item.star}}" class="start" mode="widthFix" src="https://img.thedoc.cn/wx/start@3x.png"></image>
+        </view>
+
+        <view class="details">
+          <view>
+            <text class="name">{{item.realname}}</text>
+            <text>{{item.title}}</text>
+            <text class="type">{{item.doctorType}}</text>
+          </view>
+          <view class="title">
+            <text>{{item.hospitalName}}</text>
+            <text class="hospitalLevel" wx:if="{{item.hospitalLevel}}">{{item.hospitalLevel}}</text>
+          </view>
+          <view class="address">{{item.specialty}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+
+</view>

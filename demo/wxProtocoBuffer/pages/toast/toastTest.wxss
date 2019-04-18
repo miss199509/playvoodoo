@@ -1,0 +1,27 @@
+/*底部导航*/
+.navBox{
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform : translate(-50%,-0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 14rpx 0rpx;
+  border-top: 1rpx solid #f4f4f4;
+}
+.padd{
+  padding-bottom: 45rpx;
+}
+.navBox view{
+  margin:0rpx 50rpx;
+  text-align:center;
+  padding:0rpx 55rpx;
+}
+.div_class{
+  margin-bottom: -10rpx;
+}
+.name{
+}

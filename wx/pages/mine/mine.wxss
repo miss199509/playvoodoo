@@ -1,0 +1,41 @@
+@import "../toast/toastTest";
+page{
+  background-color: #F4F4F4;
+}
+image{
+  height: auto;
+}
+
+.mineBox{
+  padding-left: 30rpx;
+  background-color: #fff;
+}
+.mineList{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+  border-bottom: 1rpx solid #D1D1D1;
+}
+.mineList>view{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mineList:last-child{
+  border: none;
+}
+.mineList view>image{
+  width: 36rpx;
+  margin-right: 28rpx;
+}
+.mineList text{
+  font-size: 32rpx;
+  color: #373C3C;
+  /* font-weight: bold; */
+}
+.mineList>image{
+  width: 32rpx;
+  margin-right: 30rpx;
+}

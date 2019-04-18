@@ -1,0 +1,13 @@
+<view>
+  <view class="mineBox">
+    <view bindtap="doctorsHref" class="mineList" wx:for="{{mineData}}" wx:key="val" data-index="{{index}}">
+      <view>
+        <image mode="widthFix" src="{{item.url}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <image mode="widthFix" src="https://img.thedoc.cn/wx/Rectangle.png"></image>
+    </view>
+  </view>
+  <import src ="../toast/toastTest"/>
+  <template is="msgItem" data="{{nodes,nodes1,isIpx}}" />
+</view>

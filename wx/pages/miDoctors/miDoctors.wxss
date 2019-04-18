@@ -1,0 +1,79 @@
+
+page{
+  background-color: #F4F4F4;
+}
+image{
+  height: auto;
+}
+
+
+.doctorsBox{
+  padding: 0rpx 30rpx;
+}
+.doctorsList{
+  display: flex;
+  justify-content: baseline;
+  align-items: end;
+  font-size: 24rpx;
+  color: #9B9B9B;
+  background-color: #fff;
+  margin-top: 22rpx;
+}
+.doctorsList image{
+  width: 100rpx;
+  border-radius: 50%;
+  margin: 30rpx 30rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.doctorsList .name{
+  color: #373C3C;
+  font-size: 28rpx;
+  margin-top: 32rpx;
+}
+.doctorsList .name text{
+  color: #373C3C;
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.doctorsList .title{
+  color:#9B9B9B;
+  margin: 2rpx 0rpx;
+  display:flex;
+  justify-content:end;
+  align-items:center;
+
+}
+.doctorsList .title text{
+  font-size: 16px;
+  color: #D43E72;
+  border: 1px solid #D43E72;
+  margin-left: -3px;
+  padding: 0rpx 4px;
+  border-radius: 2px;
+  transform: scale(0.5, 0.5);
+  line-height: 38rpx;
+}
+.doctorsList .specialty{
+  margin-bottom: 30rpx;
+  padding-right: 30rpx;
+}
+
+.miPage{
+    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  text-align: center;
+}
+.miPage image{
+  width: 200rpx;
+}
+.miPage text{
+  color: #9B9B9B;
+  font-size: 28rpx;
+  display: block
+}

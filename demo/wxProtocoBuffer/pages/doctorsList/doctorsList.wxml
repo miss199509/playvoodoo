@@ -1,0 +1,68 @@
+<view>
+
+  <view wx:if="{{doctIfBoll}}">
+
+    <view class="search">
+      <view bindtap="searchEve">
+        <icon type="search" size="15" />
+        <input value="搜索医生姓名" disabled="true" type="text" />
+      </view>
+    </view>
+    <!-- 页面整体高度减去底部导航栏的高度 -->
+    <scroll-view scroll-y style="height:{{doctorsHei-85}}px" bindscrolltolower="lowBottom" bindscrolltoupper="lowTop" scroll-top="{{topVal}}">
+      <view class="load">
+        <image wx:if="{{loadBoll}}" mode="widthFix" src="https://img.thedoc.cn/wx/loading40-40.gif"></image>
+      </view>
+      <view class="doctorsBox">
+
+        <view wx:for="{{doctorsData}}" wx:key="index" class="doctors" bindtap="detailsEve" data-index="{{index}}">
+          <view class="startBox">
+            <image binderror="errImg" src="{{item.portrait}}" data-err-img="{{index}}"></image>
+            <image wx:if="{{item.star}}" class="start" mode="widthFix" src="https://img.thedoc.cn/wx/start@3x.png"></image>
+          </view>
+          <view class="details">
+            <view>
+              <text class="name">{{item.realname}}</text>
+              <text>{{item.title}}</text>
+              <text class="type">{{item.doctorType}}</text>
+            </view>
+            <view class="title">
+              <text>{{item.hospitalName}}</text>
+              <text class="hospitalLevel" wx:if="{{item.hospitalLevel}}">{{item.hospitalLevel}}</text>
+            </view>
+            <view class="address">{{item.specialty}}<text>{{item.distance}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{loadBoll}}">
+        <view wx:if="{{data.pager.hasNext}}" class="load">
+          <image mode="widthFix" src="https://img.thedoc.cn/wx/loading40-40.gif"></image>
+        </view>
+        <view wx:else class="loadTips">暂无更多</view>
+      </view>
+
+    </scroll-view>
+
+  </view>
+  
+  <view wx:else>
+    <view class="mineBox">
+      <view bindtap="doctorsHref" class="mineList" wx:for="{{mineData}}" wx:key="val" data-index="{{index}}">
+        <view>
+          <image mode="widthFix" src="{{item.url}}"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <image mode="widthFix" src="https://img.thedoc.cn/wx/Rectangle.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <import src ="../toast/toastTest"/>
+  <template is="msgItem" data="{{nodes,nodes1,isIpx}}" />
+
+
+
+
+</view>

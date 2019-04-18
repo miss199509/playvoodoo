@@ -1,0 +1,74 @@
+<view>
+  <view class="backWhite">
+
+    <view class="detailsCenter">
+      <view><image binderror="https://img.thedoc.cn/wx/d.jpg" src="{{detailsList.portrait}}"></image></view>
+      <view class="detailsIntroduction">
+        <view class="name"><text>{{detailsList.name}}</text><text>已认证</text></view>
+        <view class="title">
+          <text>{{detailsList.role}} {{detailsList.roleParent}}</text>
+        </view>
+        <view class="address">{{detailsList.hospital}}<text wx:if="{{detailsList.hospitalLevel}}">{{detailsList.hospitalLevel}}</text>
+        </view>
+        <view>擅长：{{detailsList.department}}</view>
+      </view>
+    </view>
+
+    <view class="description">
+      <rich-text nodes="{{nodes}}"></rich-text>
+    </view>
+    <view class="simple">
+      <image bindtap="simpleEve" mode="widthFix" src="{{simpleData.url}}"></image>
+    </view>
+  </view>
+  <!-- 医生助手 -->
+  <view class="assistant backWhite">
+    <view class="title" bindtap="assistantEve">
+      <text>他的助手</text>
+      <image mode="widthFix" src="{{assistantData.url}}"></image>
+    </view>
+
+    <view class="assistantText" wx:for="{{detailsList.assistant}}" wx:key="assistant" wx:if="{{assistantData.boll}}">
+      <view><image src="{{item.portrait}}"></image></view>
+      <view class="assistantWidth">
+        <view class="name">
+          <text>{{item.name}}</text>{{item.role}} {{item.roleParent}}
+        </view>
+        <view class="label">{{item.hospital}}<text wx:if="{{item.hospitalLevel}}">{{item.hospitalLevel}}</text>
+        </view>
+        <view class="type">擅长：{{item.department}}</view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 医生团队 -->
+  <view class="assistant backWhite">
+    <view class="title" bindtap="teamEve">
+      <text>他的团队</text>
+      <image mode="widthFix" src="{{teamData.url}}"></image>
+    </view>
+
+    <view class="assistantText" wx:for="{{detailsList.team}}" wx:key="team" wx:if="{{teamData.boll}}">
+      <view><image src="{{item.portrait}}"></image></view>
+      <view class="assistantWidth">
+        <view class="name">
+          <text>{{item.name}}</text>
+          {{item.role}} {{item.roleParent}}
+        </view>
+        <view class="label">{{item.hospital}}<text wx:if="{{item.hospitalLevel}}">{{item.hospitalLevel}}</text>
+        </view>
+        <view class="type">擅长：{{item.department}}</view>
+      </view>
+    </view>
+    <view class="more" bindtap="moreEve">
+      <text>查看更多</text>
+    </view>
+
+  </view>
+  <!-- 沟通 -->
+  <!-- <view class="chat">
+    <image mode="widthFix" src="https://img.thedoc.cn/wx/icon_2.png"></image>
+    <text>沟通</text>
+  </view> -->
+</view>

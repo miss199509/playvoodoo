@@ -1,0 +1,27 @@
+<view id="sign">
+  <view class="signInput">
+
+    <view class="iamge">
+      <image src="https://img.thedoc.cn/wx/logo.png"></image>
+    </view>
+
+    <view class="phone">
+      <input maxlength='11' placeholder-class="place-holder" type="number" bindinput="getPhone" placeholder="手机号" auto-focus />
+      <button bindtap="btnclick" class="{{num<30?'operating':''}}">{{numTips}}</button>
+    </view>
+    <view class="phone password">
+      <input maxlength='6' bindinput="codeEve" placeholder-class="place-holder" type="number" placeholder="验证码" />
+    </view>
+  </view>
+
+  <view class="signButton">
+    <button class="{{signButtonBoll?'operating':''}}" open-type="getUserInfo" bindgetuserinfo="signEve">登录</button>
+
+    <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+
+  </view>
+  <view class="signTips">
+    温馨提示：首次登录自动创建医家账户，且代表您已经同意 
+    <text bindtap="agreementEve">《用户服务协议》</text>
+  </view>
+</view>

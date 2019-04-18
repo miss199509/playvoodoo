@@ -1,0 +1,28 @@
+
+.h1{
+  font-size: 40rpx;
+  text-align: center;
+  margin: 13rpx 0rpx;
+}
+.h3{
+  font-size: 33rpx;
+  text-indent: 33rpx;
+  font-weight: bold;
+  margin: 18rpx 0rpx;
+}
+.text{
+  font-size: 30rpx;
+  padding: 0rpx 23rpx;
+}
+.h3Text{
+  text-indent: 33rpx;
+  font-size: 30rpx;
+  padding: 0rpx 23rpx;
+  margin: 10rpx;
+}
+.h3TextNet{
+  text-indent: 60rpx;
+  font-size: 30rpx;
+  padding: 0rpx 23rpx;
+  margin: 10rpx;
+}

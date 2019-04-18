@@ -1,0 +1,151 @@
+@import "../toast/toastTest";
+image{
+  height: auto;
+}
+page{
+  background-color: #F4F4F4;
+}
+scroll-view{
+  height: 50px;
+}
+.search{
+  background-color: #BE3468;
+  padding: 12rpx 30rpx;
+}
+.search view{
+  background-color: #ce668d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rpx 30rpx;
+  border-radius: 100rpx;
+}
+.search view input{
+  width: 100%;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #df9cb5;
+  opacity:1;
+}
+
+/*医生列表*/
+.doctorsBox{
+  /* padding-bottom: 130rpx; */
+}
+.doctors{
+  background-color: #fff;
+  display: flex;
+  justify-content: left;
+  align-items: end;
+  color: #4A4A4A;
+  font-size: 24rpx;
+  /* height: 180rpx; */
+  border-bottom: 1rpx solid #f4f4f4;
+}
+.details{
+  width: 100%;
+}
+.details view:first-child {
+  margin-top: 30rpx;
+}
+.startBox{
+  position: relative;
+}
+.startBox>image{
+  width: 100rpx;
+  border-radius: 50%;
+  margin: 30rpx;
+  height: 100rpx;
+}
+.startBox .start{
+  position: absolute;
+  left: 14rpx;
+  border-radius: 0rpx;
+  top: 70rpx;
+  width: 80rpx;
+}
+
+
+.doctors .name{
+  font-size: 32rpx;
+  margin-right: 8rpx;
+}
+.doctors .type{
+  margin-left: 10rpx;
+}
+.doctors .title{
+  color: #9B9B9B;
+  margin: 2rpx 0rpx;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.doctors .title .hospitalLevel{
+  font-size: 16px;
+  color: #D43E72;
+  border: 1px solid #D43E72;
+  margin-left: -3px;
+  padding: 0rpx 4px;
+  border-radius: 2px;
+  transform: scale(0.5, 0.5);
+  line-height: 38rpx;
+}
+.doctors .address{
+  color: #9B9B9B;
+  margin-bottom: 32rpx;
+}
+.doctors .address text{
+  float: right;
+  margin-right: 34rpx;
+}
+
+
+/*暂无更多*/
+.loadTips{
+  color: #4A4A4A;
+  text-align: center;
+  font-size: 23rpx;
+  margin: 16rpx 0rpx;
+}
+.load{
+  text-align: center;
+}
+.load image{
+  width: 35rpx;
+}
+
+
+/*我的*/
+.mineBox{
+  padding-left: 30rpx;
+  background-color: #fff;
+}
+.mineList{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+  border-bottom: 1rpx solid #D1D1D1;
+}
+.mineList>view{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mineList:last-child{
+  border: none;
+}
+.mineList view>image{
+  width: 36rpx;
+  margin-right: 28rpx;
+}
+.mineList text{
+  font-size: 32rpx;
+  color: #373C3C;
+  /* font-weight: bold; */
+}
+.mineList>image{
+  width: 32rpx;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,12 @@
+<template name="msgItem">
+
+  <view class="{{isIpx?'navBox padd':'navBox'}}">
+    <view bindtap="docHref">
+      <rich-text nodes="{{nodes}}"></rich-text>
+    </view>
+    <view bindtap="mineHref">
+      <rich-text nodes="{{nodes1}}"></rich-text>
+    </view>
+  </view>
+
+</template>
